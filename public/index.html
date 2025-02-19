@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-    <h1>My Locations Map</h1>
-
     <!-- Search Box -->
     <input type="text" id="searchBox" placeholder="Search locations..." />
 
@@ -23,8 +21,41 @@
         <div id="all-tags" style="display: none;"></div>
     </div>
 
+    <!-- Auth Container -->
+    <div id="auth-container">
+        <div id="auth-forms">
+            <!-- Login Form -->
+            <div id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button id="login-btn">Login</button>
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </div>
+    
+            <!-- Signup Form -->
+            <div id="signup-form" style="display: none;">
+                <h2>Sign Up</h2>
+                <input type="text" id="signup-username" placeholder="Username">
+                <input type="email" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button id="signup-btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+            </div>
+        </div>
+    
+        <button id="logout-btn" style="display: none;">Logout</button>
+    </div>
+
+    <button id="myLocationsBtn">My Locations</button>
+
     <!-- Map Container -->
     <div id="map"></div>
+    <div id="pagination-controls">
+        <button id="prevPage" onclick="changePage(-1)">Previous</button>
+        <span id="pageIndicator">Page 1</span>
+        <button id="nextPage" onclick="changePage(1)">Next</button>
+    </div>
 
     <!-- Popup Form Modal -->
     <div id="locationModal" class="modal">
@@ -40,6 +71,9 @@
 
             <label for="description">Description:</label>
             <textarea id="description" placeholder="Enter description"></textarea>
+
+            <label for="tags">Tags (comma-separated):</label>
+            <input type="text" id="tags" placeholder="e.g., urban, sunset, cityscape">   
             
             <button id="saveLocation">Save Location</button>
         </div>

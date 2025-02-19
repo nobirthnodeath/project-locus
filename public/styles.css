@@ -105,3 +105,127 @@ input, textarea {
 #show-all-tags:hover {
     background: #555;
 }
+
+/* Signup / Login */
+
+#auth-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#auth-forms input {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    padding: 8px;
+}
+
+#auth-forms button {
+    display: block;
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#logout-btn {
+    margin-top: 10px;
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* My locations only button */
+#myLocationsBtn.active {
+    background-color: #28a745;
+    color: white;
+}
+
+
+
+/* Popup Container */
+.popup-container {
+    width: 250px;
+    max-width: 90vw;
+    font-family: Arial, sans-serif;
+}
+
+/* Image at the top */
+.popup-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Title */
+.popup-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 0 4px;
+}
+
+/* Description (truncate after 2 lines) */
+.popup-description {
+    font-size: 14px;
+    color: #555;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* Tags container */
+.popup-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+/* Tag buttons */
+.popup-tag {
+    font-size: 12px;
+    background: #eef2f7;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.popup-tag:hover {
+    background: #d0d7e0;
+}
+
+/* Image container (holds the close button inside) */
+.popup-image-container {
+    position: relative;
+}
+
+/* Close button */
+.popup-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    background: rgba(0, 0, 0, 0.5); /* Half-transparent black */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.popup-close-btn:hover {
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker on hover */
+}
